@@ -1,0 +1,29 @@
+table{
+    list-style: none;
+    margin: 20px 60px;
+    height: auto;
+    border-collapse: collapse;
+}
+
+tr{
+    height: 90px;
+}
+
+td{
+    padding: 20px;
+    border-top: solid 10px silver;
+    border-bottom: solid 10px silver;
+}
+
+.filme-posicao{
+    padding: 10px;
+    color: white;    
+    background-color: gray;
+    font-size: 35px;
+}
+
+.filme-titulo{
+    width: 100%;    
+    font-size: 30px;
+    background-color: white;
+}

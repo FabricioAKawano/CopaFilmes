@@ -1,0 +1,24 @@
+<section>
+    <div class="home-comando">
+        <!-- <span> Selecionados {{qtdSelecionados}} de {{qtdMaxSelecao}} filmes</span> -->
+        <span class="quantidade-selecionados">
+            <p>Selecionados</p>
+            <p>{{qtdSelecionados}} de {{qtdMaxSelecao}} filmes</p>
+        </span>
+        <span class="gera-campeonato"><button [disabled]="btnDisabled" [className]="btnDisabled ? 'btn-disable' : 'btn-enable'" (click)="gerarCampeonato()">GERAR MEU CAMPEONATO</button></span>        
+    </div>
+    <table class="home-table">
+        <tr *ngFor="let count of countNumber; let i = index">
+            <td *ngFor="let filme of filmes.slice(count, count + qtdColunas)">
+                <div class="filme-selecionado">
+                    <input type="checkbox" [(ngModel)]="filme.selecionado" [ngModelOptions]="{standalone: true}" (change)="validarSelecao()" [disabled]="filme.disabled"/>
+                </div>
+                
+                <div>
+                    <div class="filme-titulo"><strong>{{filme.titulo}}</strong></div>
+                    <div>{{filme.ano}}</div>
+                </div>           
+            </td>        
+        </tr>        
+    </table>
+</section>
